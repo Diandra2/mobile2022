@@ -8,7 +8,7 @@ const styles = StyleSheet.create({
     margin: 10
   },
   buttonPurple: {
-    backgroundColor: colors.purple,
+    backgroundColor: colors.orange,
     borderRadius: 5,
     margin: 10
   },
