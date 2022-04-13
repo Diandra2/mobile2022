@@ -1,4 +1,3 @@
-  
 import { StackNavigationProp } from "@react-navigation/stack";
 
 // Login Stack

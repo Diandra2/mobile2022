@@ -26,7 +26,7 @@ export default function Cadastrar({ navigation }: LoginTypes) {
         style={styles.container}
       >
         <KeyboardAvoidingView>
-          <Text style={styles.title}>Login</Text>
+          <Text style={styles.title}>Cadastre-se</Text>
           <View style={styles.formRow}>
             <Ionicons name="person" style={styles.icon} />
             <TextInput style={styles.input} placeholder="Nome" />
@@ -49,8 +49,8 @@ export default function Cadastrar({ navigation }: LoginTypes) {
               autoCapitalize="none"
             />
           </View>
-          <Button title="Salvar" type="green" onPress={handleSignIn} />
-          <Button title="Voltar" type="orange" onPress={handleLogin} />
+          <Button title="Salvar" type="orange" onPress={handleSignIn} />
+          <Button title="Voltar" type="green" onPress={handleLogin} />
         </KeyboardAvoidingView>
       </ImageBackground>
     </View>
