@@ -12,6 +12,9 @@ export default function TabNavigation() {
       screenOptions={{
         headerShown: false,
         tabBarBadgeStyle: { backgroundColor: colors.orange },
+        tabBarActiveTintColor: colors.white,
+        tabBarInactiveBackgroundColor: colors.greenLight,
+        tabBarInactiveTintColor: colors.white,
       }}
     >
       <Tab.Screen
