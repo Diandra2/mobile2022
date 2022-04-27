@@ -1,5 +1,5 @@
 export interface ButtonProps {
     onPress: () => void
     title: string
-    type: 'green' | 'orange' | 'orange'
+    type: 'primary' | 'secondary' | 'secondary'
 }

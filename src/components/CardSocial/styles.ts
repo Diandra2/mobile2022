@@ -3,7 +3,7 @@ import colors from "../../styles/colors";
 
 const styles = StyleSheet.create({
   cardSocial: {
-    backgroundColor: colors.greenLight,
+    backgroundColor: colors.primaryLight,
     borderRadius: 10,
     margin: 10,
     width: "90%",
