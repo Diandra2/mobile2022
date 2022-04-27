@@ -9,7 +9,7 @@ export default function Perfil() {
   return (
     <View style={styles.container}>
         <Image source={require("../../assets/diandra.png")} />
-        <Text>Diandra Edwiges Amaral Rodrigues</Text>
+        <Text style={styles.title}>Diandra E. Amaral Rodrigues</Text>
       <CardSocial>
         <>
           <FontAwesome5 name="facebook" style={styles.icon} />
@@ -27,17 +27,13 @@ export default function Perfil() {
           <FontAwesome5 name="linkedin" style={styles.icon} />
           <Text style={styles.link}>https://linkedin.com</Text>
         </>
-      </CardSocial>
-      <Button
-        title="Alterar Senha"
-        type="secondary"
-        onPress={() => console.log("Alterar Senha")}
-      />
-      <Button
-        title="Sair"
-        type="secondary"
-        onPress={() => console.log("Sair")}
-      />
+       </CardSocial>
+       <Button
+         title="Alterar Senha"
+         type="secondary"
+         onPress={() => console.log("Alterar Senha")}
+       />
+       <Button title="Sair" type="secondary" onPress={() => console.log("Sair")} />
     </View>
   );
 }
