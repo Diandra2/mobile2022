@@ -3,7 +3,7 @@ import { View, Text } from "react-native";
 import { CardProps } from "../../interfaces/Card.interface";
 import styles from "./styles";
 
-export default function CardSocial({ data }: CardProps) {
+export default function Card({ data }: CardProps) {
   return (
     <View style={styles.card}>
       <Text>
