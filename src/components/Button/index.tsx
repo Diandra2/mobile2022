@@ -9,9 +9,9 @@ export default function Button({ onPress, type, title, ...rest }: ButtonProps) {
       style={
         type == "primary"
           ? styles.buttonGreen
-          : type == "secondary"
-          ? styles.buttonOrange
-          : styles.buttonPurple
+          : type == "secundary"
+          ? styles.buttonSecundary
+          : styles.buttonPrimary
       }
       onPress={onPress}
       {...rest}

@@ -3,7 +3,7 @@ export default {
     white: '#ffffff',
     primary: '#00092C',
     primaryLight: 'rgba(178, 6, 0, 0.26)',
-    secondary: '#FF5F00',
-    secondaryLight: '#FFE9CA',
+    secundary: '#FF5F00',
+    secundaryLight: '#FFE9CA',
     third: '#EEEEEE'
   }

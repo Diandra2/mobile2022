@@ -7,13 +7,13 @@ const styles = StyleSheet.create({
     borderRadius: 5,
     margin: 10
   },
-  buttonPurple: {
-    backgroundColor: colors.secondary,
+  buttonPrimary: {
+    backgroundColor: colors.secundary,
     borderRadius: 5,
     margin: 10
   },
-  buttonOrange: {
-    backgroundColor: colors.secondary,
+  buttonSecundary: {
+    backgroundColor: colors.secundary,
     borderRadius: 5,
     margin: 10
   },
