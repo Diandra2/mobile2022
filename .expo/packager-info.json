@@ -1,8 +1,10 @@
 {
   "devToolsPort": 19002,
   "expoServerPort": null,
-  "packagerPort": 19000,
-  "expoServerNgrokUrl": "https://mh-reh.anonymous.diandra.exp.direct",
-  "packagerNgrokUrl": "https://mh-reh.anonymous.diandra.exp.direct",
-  "ngrokPid": 8759
+  "packagerPort": null,
+  "expoServerNgrokUrl": null,
+  "packagerNgrokUrl": null,
+  "ngrokPid": null,
+  "packagerPid": null,
+  "webpackServerPort": null
 }

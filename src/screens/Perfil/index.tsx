@@ -1,5 +1,5 @@
 import React from "react";
-import { Text, ImageBackground, Image } from "react-native";
+import { Text, Image, View } from "react-native";
 import { FontAwesome5 } from "@expo/vector-icons";
 import { ButtonComp, CardSocialComp } from "../../components";
 import styles from "./style";
@@ -7,10 +7,7 @@ import { useAuth } from "../../hook/auth";
 export default function Perfil() {
   const { user } = useAuth();
   return (
-    <ImageBackground
-      source={require("../../assets/fundo.png")}
-      style={styles.container}
-    >
+    <View style={styles.container}>
       <Image source={{ uri: user?.profile_photo_url }} style={styles.img} />
       <Text style={styles.title}>{user?.name}</Text>
       <CardSocialComp>
@@ -41,6 +38,6 @@ export default function Perfil() {
         type="secundary"
         onPress={() => console.log("Sair")}
       />
-    </ImageBackground>
+    </View>
   );
 }

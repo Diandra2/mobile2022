@@ -23,7 +23,8 @@
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#FFFFFF"
-      }
+      },
+      "package": "com.cefetmg.mobile2022.turma01"
     },
     "web": {
       "favicon": "./assets/favicon.png"

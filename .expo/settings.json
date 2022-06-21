@@ -3,7 +3,8 @@
   "lanType": "ip",
   "dev": true,
   "minify": false,
-  "urlRandomness": "mh-reh",
+  "urlRandomness": "rp-9u6",
   "https": false,
-  "scheme": null
+  "scheme": null,
+  "devClient": false
 }
