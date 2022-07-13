@@ -1,9 +1,9 @@
 import React from "react";
 import { Text, StyleSheet } from "react-native";
 import { createDrawerNavigator } from "@react-navigation/drawer";
-import { Ionicons } from "@expo/vector-icons";
+import { Ionicons, MaterialCommunityIcons } from "@expo/vector-icons";
 import colors from "../styles/colors";
-import { ChatScreen, MapScreen, PerfilScreen } from "../screens";
+import { ChatScreen, MapScreen, PerfilScreen, QrCodeScreen } from "../screens";
 
 const Drawer = createDrawerNavigator();
 export default function HomeRoute() {
@@ -50,6 +50,20 @@ export default function HomeRoute() {
           ),
         }}
       />
+      <Drawer.Screen
+      name="QrCode"
+      component={QrCodeScreen}
+      options={{
+        drawerLabel: "QrCode",
+        drawerIcon: () => (
+          <MaterialCommunityIcons
+          name="qrcode-scan"
+          size={24}
+          color={colors.white}
+          />
+        ),
+      }}
+    />
     </Drawer.Navigator>
   );
 }
