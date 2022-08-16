@@ -3,7 +3,7 @@ import { Text, StyleSheet } from "react-native";
 import { createDrawerNavigator } from "@react-navigation/drawer";
 import { Ionicons, MaterialCommunityIcons } from "@expo/vector-icons";
 import colors from "../styles/colors";
-import { ChatScreen, MapScreen, PerfilScreen, QrCodeScreen } from "../screens";
+import { ChatScreen, MapScreen, PerfilScreen, QrCodeScreen, CameraScreen } from "../screens";
 
 const Drawer = createDrawerNavigator();
 export default function HomeRoute() {
@@ -63,6 +63,20 @@ export default function HomeRoute() {
           />
         ),
       }}
+    />
+    <Drawer.Screen
+      name="Camera"
+      component={CameraScreen}
+      options={{
+        drawerLabel: "Câmera",
+        drawerIcon: () => (
+          <MaterialCommunityIcons
+          name="camera"
+          size={24}
+          color={colors.white}
+        />
+      ),
+    }}
     />
     </Drawer.Navigator>
   );
