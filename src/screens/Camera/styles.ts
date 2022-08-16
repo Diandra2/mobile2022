@@ -22,7 +22,7 @@ const styles = StyleSheet.create({
     },
     textStartOver: {
         color: colors.white,
-        frontWeight: "bold",
+        fontWeight: "bold",
         textAlign: "center",
     },
     collumnPreviewVisible: {
