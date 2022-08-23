@@ -6,6 +6,7 @@ import styles from "./style";
 import { useAuth } from "../../hook/auth";
 export default function Perfil() {
   const { user } = useAuth();
+  console.log(user?.profile_photo_url)
   return (
     <View style={styles.container}>
       <Image source={{ uri: user?.profile_photo_url }} style={styles.img} />
@@ -30,12 +31,12 @@ export default function Perfil() {
       </CardSocialComp>
       <ButtonComp
         title="Alterar Senha"
-        type="secundary"
+        type="primary"
         onPress={() => console.log("Alterar Senha")}
       />
       <ButtonComp
         title="Sair"
-        type="secundary"
+        type="primary"
         onPress={() => console.log("Sair")}
       />
     </View>

@@ -7,6 +7,7 @@ const styles = StyleSheet.create({
     alignItems: "center",
     justifyContent: "center",
     resizeMode: "cover",
+    backgroundColor: colors.rosa
   },
   title: {
     fontSize: 30,
@@ -21,6 +22,11 @@ const styles = StyleSheet.create({
   },
   link: {
     fontSize: 20
+  },
+  img: {
+    width: 100,
+    height: 100,
+    borderRadius: 50
   }
 })
 

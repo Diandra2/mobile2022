@@ -31,7 +31,7 @@ export default function App() {
         const photo = await camera.takePictureAsync();
         console.log(photo);
         setPreviewVisible(true);
-        setCapturedImage;
+        setCapturedImage(photo);
     };
     const __savePhoto = async () => {
         const permission = await MediaLibrary.requestPermissionsAsync();
