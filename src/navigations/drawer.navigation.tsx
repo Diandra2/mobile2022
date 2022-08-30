@@ -1,9 +1,9 @@
 import React from "react";
-import { Text, StyleSheet } from "react-native";
 import { createDrawerNavigator } from "@react-navigation/drawer";
 import { Ionicons, MaterialCommunityIcons } from "@expo/vector-icons";
 import colors from "../styles/colors";
-import { ChatScreen, MapScreen, PerfilScreen, QrCodeScreen, CameraScreen, ArquivoScreen } from "../screens";
+import {  MapScreen, PerfilScreen, QrCodeScreen, CameraScreen, ArquivoScreen } from "../screens";
+import ChatNavigation from "./chat.navigation";
 
 const Drawer = createDrawerNavigator();
 export default function HomeRoute() {
@@ -31,15 +31,16 @@ export default function HomeRoute() {
         }}
       />
       <Drawer.Screen
-        name="Chat"
-        component={ChatScreen}
-        options={{
-          drawerLabel: "Chat",
-          drawerIcon: () => (
-            <Ionicons name="chatbubbles" size={24} color={colors.white} />
-          ),
-        }}
-      />
+      name="ChatNavigation"
+      component={ChatNavigation}
+      options={{
+        title: "Chat",
+        drawerLabel: "Chat",
+        drawerIcon: () => (
+          <Ionicons name="chatbubbles" size={24} color={colors.white} />
+        ) ,
+      }}
+    />
       <Drawer.Screen
         name="Mapa"
         component={MapScreen}

@@ -17,7 +17,7 @@ export default function Card({ data }: IMensagemState) {
         <Text>Mensagem: {data.mensagem}</Text>
         <Image source={{ uri: data.imagem }} style={styles.img} />
         <View style={styles.topicos}>
-          {data.topico.map((i) => (
+          {data.topicos.map((i) => (
             <View key={i.id} style={styles.topic}>
               <Text>{i.topico}</Text>
             </View>

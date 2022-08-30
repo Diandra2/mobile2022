@@ -7,4 +7,6 @@ export { default as  SairScreen } from "./Sair"
 export { default as QrCodeScreen} from "./QrCode"
 export { default as CameraScreen} from "./Camera"
 export { default as ArquivoScreen} from "./Arquivo"
+export { default as EnviarMensagemScreen} from "./EnviarMensagem"
+
 

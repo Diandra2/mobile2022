@@ -2,7 +2,6 @@ import React, {useEffect, useState} from "react";
 import {
   View,
   TextInput,
-  ImageBackground,
   FlatList,
   SafeAreaView,
   TouchableOpacity,

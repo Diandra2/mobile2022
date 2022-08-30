@@ -7,7 +7,7 @@ export interface ITopico {
     }[]    
 }
 
-export interface ITopicoServe {
+export interface ITopicoServer {
     id: number,
     topico: string
 }
