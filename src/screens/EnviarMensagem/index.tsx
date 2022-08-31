@@ -4,6 +4,7 @@ import {
     Text,
     TextInput,
     KeyboardAvoidingView,
+    ImageBackground,
     Image,
     Alert,
     TouchableOpacity,
@@ -113,7 +114,7 @@ export default function EnviarMensagem({ navigation }: ChatTypes) {
             {isLoading ? (
                 <LoadingComp />
             ) : (
-                <View>
+                <View style={styles.container}>
                     {startOver ? (
                         <KeyboardAvoidingView style={styles.containerForm}>
                             <TextInput
@@ -132,15 +133,16 @@ export default function EnviarMensagem({ navigation }: ChatTypes) {
                                 <MultiSelect
                                     items={topico}
                                     uniqueKey="id"
-                                    selectText="Selecione os Tópicos "
-                                    onSelectedItemsChange={ (i) => setSelectedTopico(i) }
+                                    selectText="Selecione os Tópicos"
+                                    onSelectedItemsChange={(i) => setSelectedTopico(i)}
                                     selectedItems={selectedTopico}
-                                    selectedItemTextColor={colors.rosa}
-                                    tagBorderColor={colors.rosa}
-                                    tagTextColor={colors.rosa}
-                                    submitButtonColor={colors.rosa}
+                                    selectedItemTextColor={colors.primary}
+                                    tagBorderColor={colors.primary}
+                                    tagTextColor={colors.primary}
+                                    submitButtonColor={colors.primary}
                                     styleDropdownMenu={styles.selectTopico}
                                     styleInputGroup={styles.selectTopico}
+                                    styleMainWrapper={{backgroundColor: colors.primaryLight}}
                                 />
                             </View>
                             <View style={styles.imagem}>
@@ -212,8 +214,9 @@ export default function EnviarMensagem({ navigation }: ChatTypes) {
                                 </View>
                             </View>
                         </Camera>
-                    )}  
-                </View>              
+                    )}
+                </View>
+                
             )}
         </>
     );

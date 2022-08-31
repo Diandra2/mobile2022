@@ -7,7 +7,7 @@ const Stack = createStackNavigator<ChatStackParamList>();
 
 export default function ChatNavigation() {
     return (
-       <Stack.Navigator sreenOptions={{ headerShown: false }}>
+       <Stack.Navigator screenOptions={{ headerShown: false }}>
            <Stack.Screen name="Chat" component={ChatScreen}/>
             <Stack.Screen name="EnviarMensagem" component={EnviarMensagemScreen}/>
        </Stack.Navigator>
