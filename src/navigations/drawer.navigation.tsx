@@ -2,7 +2,7 @@ import React from "react";
 import { createDrawerNavigator } from "@react-navigation/drawer";
 import { Ionicons, MaterialCommunityIcons } from "@expo/vector-icons";
 import colors from "../styles/colors";
-import {  MapScreen, PerfilScreen, QrCodeScreen, CameraScreen, ArquivoScreen } from "../screens";
+import { MapScreen, PerfilScreen, QrCodeScreen, CameraScreen, ArquivoScreen, VideoAudioScreen } from "../screens";
 import ChatNavigation from "./chat.navigation";
 
 const Drawer = createDrawerNavigator();
@@ -11,7 +11,7 @@ export default function HomeRoute() {
     <Drawer.Navigator
       screenOptions={{
         headerShown: true,
-        headerStyle: { backgroundColor: colors.primaryLight},
+        headerStyle: { backgroundColor: colors.primaryLight },
         headerTintColor: colors.white,
         drawerStyle: {
           backgroundColor: colors.primaryLight,
@@ -31,16 +31,16 @@ export default function HomeRoute() {
         }}
       />
       <Drawer.Screen
-      name="ChatNavigation"
-      component={ChatNavigation}
-      options={{
-        title: "Chat",
-        drawerLabel: "Chat",
-        drawerIcon: () => (
-          <Ionicons name="chatbubbles" size={24} color={colors.white} />
-        ) ,
-      }}
-    />
+        name="ChatNavigation"
+        component={ChatNavigation}
+        options={{
+          title: "Chat",
+          drawerLabel: "Chat",
+          drawerIcon: () => (
+            <Ionicons name="chatbubbles" size={24} color={colors.white} />
+          ),
+        }}
+      />
       <Drawer.Screen
         name="Mapa"
         component={MapScreen}
@@ -52,48 +52,62 @@ export default function HomeRoute() {
         }}
       />
       <Drawer.Screen
-      name="QrCode"
-      component={QrCodeScreen}
-      options={{
-        drawerLabel: "QrCode",
-        drawerIcon: () => (
-          <MaterialCommunityIcons
-          name="qrcode-scan"
-          size={24}
-          color={colors.white}
-          />
-        ),
-      }}
-    />
-    <Drawer.Screen
-      name="Camera"
-      component={CameraScreen}
-      options={{
-        drawerLabel: "Câmera",
-        drawerIcon: () => (
-          <MaterialCommunityIcons
-          name="camera"
-          size={24}
-          color={colors.white}
-        />
-      ),
-    }}
-    />
-    <Drawer.Screen
-       name="Arquivos"
-       component={ArquivoScreen}
-       options={{
-         drawerLabel: "Arquivos",
-         drawerIcon: () => (
-           <MaterialCommunityIcons
-             name="file-account"
-             size={24}
-             color={colors.white}
+        name="QrCode"
+        component={QrCodeScreen}
+        options={{
+          drawerLabel: "QrCode",
+          drawerIcon: () => (
+            <MaterialCommunityIcons
+              name="qrcode-scan"
+              size={24}
+              color={colors.white}
             />
-         ),
-       }}
-    />
+          ),
+        }}
+      />
+      <Drawer.Screen
+        name="Camera"
+        component={CameraScreen}
+        options={{
+          drawerLabel: "Câmera",
+          drawerIcon: () => (
+            <MaterialCommunityIcons
+              name="camera"
+              size={24}
+              color={colors.white}
+            />
+          ),
+        }}
+      />
+      <Drawer.Screen
+        name="Arquivos"
+        component={ArquivoScreen}
+        options={{
+          drawerLabel: "Arquivos",
+          drawerIcon: () => (
+            <MaterialCommunityIcons
+              name="file-account"
+              size={24}
+              color={colors.white}
+            />
+            ),
+        }}
+      />
+            <Drawer.Screen
+              name="AudioVideo"
+              component={VideoAudioScreen}
+              options={{
+                drawerLabel: "Audio Video",
+                drawerIcon: () => (
+                  <MaterialCommunityIcons
+                    name="video"
+                    size={24}
+                    color={colors.white}
+                  />
+                ),
+              }}
+            />
     </Drawer.Navigator>
-  );
-}
-
+    );
+  }
+  
