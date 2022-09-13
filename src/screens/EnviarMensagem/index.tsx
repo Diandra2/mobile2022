@@ -113,7 +113,7 @@ export default function EnviarMensagem({ navigation }: ChatTypes) {
             {isLoading ? (
                 <LoadingComp />
             ) : (
-                <View>
+                <View style={styles.container}>
                     {startOver ? (
                         <KeyboardAvoidingView style={styles.containerForm}>
                             <TextInput
@@ -141,6 +141,7 @@ export default function EnviarMensagem({ navigation }: ChatTypes) {
                                     submitButtonColor={colors.primary}
                                     styleDropdownMenu={styles.selectTopico}
                                     styleInputGroup={styles.selectTopico}
+                                    styleMainWrapper={{backgroundColor: colors.primaryLight}}
                                 />
                           </View>
                           <View style={styles.imagem}>
