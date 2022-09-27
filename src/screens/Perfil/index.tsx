@@ -1,12 +1,32 @@
-import React from "react";
+import React, {useEffect} from "react";
 import { Text, Image, View } from "react-native";
 import { FontAwesome5 } from "@expo/vector-icons";
 import { ButtonComp, CardSocialComp } from "../../components";
 import styles from "./style";
 import { useAuth } from "../../hook/auth";
+import * as Notifications from 'expo-notifications';
+import { registerForPushNotificationsAsync } from "../../services/data/Push";
+
+Notifications.setNotificationHandler({
+  handleNotification: async () => ({
+    shouldShowAlert: true,
+    shouldPlaySound: true,
+    shouldSetBadge: true,
+
+  }),
+});
+
 export default function Perfil() {
   const { user } = useAuth();
   console.log(user?.profile_photo_url)
+
+  useEffect(() => {
+    async function fetchToken() {
+      const token = await registerForPushNotificationsAsync()
+      console.log(token)
+    }
+    fetchToken()
+  }, []);
   return (
     <View style={styles.container}>
       <Image source={{ uri: user?.profile_photo_url }} style={styles.img} />
