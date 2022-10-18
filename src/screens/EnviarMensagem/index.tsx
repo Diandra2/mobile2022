@@ -168,7 +168,7 @@ export default function EnviarMensagem({ navigation }: ChatTypes) {
                             />
                             <ButtonComp
                                 title="Voltar"
-                                type="secundary"
+                                type="secundaryLight"
                                 onPress={handleVoltar}
                             />
                         </KeyboardAvoidingView>

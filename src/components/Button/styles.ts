@@ -8,12 +8,12 @@ const styles = StyleSheet.create({
     margin: 10
   },
   buttonPrimary: {
-    backgroundColor: colors.secundary,
+    backgroundColor: colors.secundaryLight,
     borderRadius: 5,
     margin: 10
   },
-  buttonSecundary: {
-    backgroundColor: colors.secundary,
+  buttonsecundaryLight: {
+    backgroundColor: colors.secundaryLight,
     borderRadius: 5,
     margin: 10
   },

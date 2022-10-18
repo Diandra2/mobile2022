@@ -13,7 +13,7 @@ const styles = StyleSheet.create({
     fontSize: 30,
     fontWeight: "bold",
     textAlign: "center",
-    color: colors.secundary,
+    color: colors.secundaryLight,
     marginBottom: 20,
   },
   formRow: {
@@ -21,12 +21,12 @@ const styles = StyleSheet.create({
     flexDirection: "row",
     alignItems: "center",
     borderWidth: 1,
-    borderColor: colors.secundary,
+    borderColor: colors.secundaryLight,
     borderRadius: 5,
   },
   label: {
     fontSize: 18,
-    color: colors.secundary,
+    color: colors.secundaryLight,
     padding: 5
   },
   input: {
@@ -36,7 +36,7 @@ const styles = StyleSheet.create({
   },
   icon: {
     fontSize: 24,
-    color: colors.secundary,
+    color: colors.secundaryLight,
     padding: 10
   }
 })

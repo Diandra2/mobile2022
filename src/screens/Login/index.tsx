@@ -1,19 +1,20 @@
-import React, { useState, useEffect } from "react";
+import React, {useState, useEffect} from "react";
 import {
   View,
   Text,
-  TextInput,
   KeyboardAvoidingView,
-  ImageBackground,
+  TextInput,
   Alert,
 } from "react-native";
-import { MaterialIcons, Entypo } from "@expo/vector-icons";
-import { ButtonComp } from "../../components";
+import { MaterialIcons, Entypo, Ionicons, FontAwesome } from "@expo/vector-icons";
+import {ButtonComp, LoadingComp} from "../../components";
 import styles from "./styles";
-import { LoginTypes } from "../../types/Screen.types";
 import { useAuth } from "../../hook/auth";
-import { IAuthenticate, IUser } from "../../interfaces/User.interface";
+import {  IAuthenticate, IUser, IRegister } from "../../interfaces/User.interface";
+import { IResponse } from "../../interfaces/Response.interface";
+import { LoginTypes } from "../../types/Screen.types";
 import { AxiosError } from "axios";
+
 export default function Login({ navigation }: LoginTypes) {
   const { signIn } = useAuth();
   const [data, setData] = useState<IAuthenticate>();
@@ -24,21 +25,21 @@ export default function Login({ navigation }: LoginTypes) {
   function handleChange(item: IAuthenticate) {
     setData({ ...data, ...item });
   }
-  async function handleSignIn() {
-    try {
+  async function handleSignIn(){
+    try{
       setIsLoading(true);
-      if (data?.email && data.password) {
+      if(data?.email && data.password){
         await signIn(data);
-      } else {
+      }else{
         Alert.alert("Preencha todos os campos!!!");
         setIsLoading(false);
       }
-    } catch (error) {
+    } catch (error){
       const err = error as AxiosError;
       const data = err.response?.data as IUser;
       let message = "";
-      if (data.data) {
-        for (const [key, value] of Object.entries(data.data)) {
+      if (data.data){
+        for (const [key, value] of Object.entries(data.data)){
           message = `${message} ${value}`;
         }
       }
@@ -47,39 +48,40 @@ export default function Login({ navigation }: LoginTypes) {
     }
   }
   useEffect(() => {
-    setIsLoading(false);
+      setIsLoading(false);
   }, []);
+
   return (
-    <View style={styles.container}>
-        <KeyboardAvoidingView>
-          <Text style={styles.title}>Login</Text>
-          <View style={styles.formRow}>
-            <MaterialIcons name="email" style={styles.icon} />
-            <TextInput
-              style={styles.input}
-              placeholder="E-mail"
-              keyboardType="email-address"
-              autoCapitalize="none"
-              onChangeText={(i) => handleChange({ email: i })}
-            />
-          </View>
-          <View style={styles.formRow}>
-            <Entypo name="key" style={styles.icon} />
-            <TextInput
-              style={styles.input}
-              placeholder="Senha"
-              secureTextEntry={true}
-              autoCapitalize="none"
-              onChangeText={(i) => handleChange({ password: i })}
-            />
-          </View>
-          <ButtonComp title="Login" type="primary" onPress={handleSignIn} />
-          <ButtonComp
-            title="Cadastre-se"
-            type="secundary"
-            onPress={handleCadastrar}
-          />
-        </KeyboardAvoidingView>
-    </View>
-  );
+        <View style={styles.container}>
+            <KeyboardAvoidingView>
+              <Text style={styles.title}>Login</Text>
+              <View style={styles.formRow}>
+                <MaterialIcons name="email" style={styles.icon} />
+                <TextInput 
+                  style={styles.input}
+                  placeholder="E-mail"
+                  keyboardType="email-address"
+                  autoCapitalize="none"
+                  onChangeText={(i) => handleChange({ email: i })}
+                />
+              </View>
+              <View style={styles.formRow}>
+                <Entypo name="key" style={styles.icon} />
+                <TextInput
+                  style={styles.input}
+                  placeholder="Senha"
+                  secureTextEntry={true}
+                  autoCapitalize="none"
+                  onChangeText={(i) => handleChange({ password: i })}
+                />
+              </View>
+              <ButtonComp title="Login" type="primary" onPress={handleSignIn}/>
+              <ButtonComp 
+              title="Cadastre-se" 
+              type="primary" 
+              onPress={handleCadastrar} 
+              />
+            </KeyboardAvoidingView>
+        </View>
+   );
 }
