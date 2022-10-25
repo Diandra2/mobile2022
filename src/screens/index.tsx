@@ -10,6 +10,7 @@ export { default as ArquivoScreen} from "./Arquivo"
 export { default as EnviarMensagemScreen} from "./EnviarMensagem"
 export { default as VideoAudioScreen} from "./VideoAudio"
 export { default as AcelerometroScreen} from "./Acelerometro"
+export { default as PedometroScreen} from "./Pedometro"
 
 
 
